@@ -1,0 +1,77 @@
+<web-app>
+	<display-name>hrms</display-name>
+	<servlet>
+		<servlet-name>hrms_user_login</servlet-name>
+		<servlet-class>com.main.hrms_user_login</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hrms_employee</servlet-name>
+		<servlet-class>com.main.hrms_employee</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hrms_applicant</servlet-name>
+		<servlet-class>com.main.hrms_applicant</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>applicant_test_dtl</servlet-name>
+		<servlet-class>com.main.applicant_test_dtl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>time_management</servlet-name>
+		<servlet-class>com.main.time_management</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>leave_management</servlet-name>
+		<servlet-class>com.main.leave_management</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>hrms_payroll</servlet-name>
+		<servlet-class>com.main.hrms_payroll</servlet-class>
+	</servlet>
+
+	<!-- Servlet mappings -->
+	<servlet-mapping>
+		<servlet-name>hrms_user_login</servlet-name>
+		<url-pattern>/servlet/hrms_user_login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>hrms_applicant</servlet-name>
+		<url-pattern>/servlet/hrms_applicant</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>applicant_test_dtl</servlet-name>
+		<url-pattern>/servlet/applicant_test_dtl</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>hrms_employee</servlet-name>
+		<url-pattern>/servlet/hrms_employee</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>leave_management</servlet-name>
+		<url-pattern>/servlet/leave_management</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>log4j-config-location</param-name>
+		<param-value>WEB-INF/log4j.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>db-config-location</param-name>
+		<param-value>WEB-INF/config.properties</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>com.main.ContextListener</listener-class>
+	</listener>
+	<!-- <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list> -->
+
+</web-app>
